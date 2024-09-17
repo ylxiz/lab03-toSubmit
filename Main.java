@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,10 @@ public class Main {
         
         for (String student : studentList) {
             System.out.println(student);
+
         }
+        int groupSize = 2;
+        createRandomGroups(studentList, groupSize);
     }
     
 
@@ -26,6 +30,18 @@ public class Main {
         students.add("ali, 3532, 2.8");
         
         return students;
+    }
+    public static void createRandomGroups(List<String> students, int groupSize) {
+        Collections.shuffle(students);
+
+        int groupNumber = 1;
+        for (int i = 0; i < students.size(); i += groupSize) {
+            System.out.println("Group " + groupNumber + ":");
+            for (int j = i; j < i + groupSize && j < students.size(); j++) {
+                System.out.println("  " + students.get(j));
+            }
+            groupNumber++;
+        }
     }
     
 }
