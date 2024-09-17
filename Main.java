@@ -23,6 +23,7 @@ public class Main {
         students.add("Abdulaziz, 1234, 3.8");
         students.add("Abdullah, 2345, 3.6");
         students.add("Mohammed, 3456, 3.9");
+        students.add("ali, 3532, 2.8");
         
         return students;
     }
